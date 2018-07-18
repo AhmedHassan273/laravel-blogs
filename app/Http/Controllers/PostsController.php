@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Post;
+
 class PostsController extends Controller
 {
     /**
@@ -29,13 +31,17 @@ class PostsController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    **/
+    public function store()
     {
-        return view('posts.')
+        $post = new Post;
+
+        $post->title = request('title');
+        $post->body = request('body');
+
+        $post->save();
+        
+        return view('posts.index');
     }
 
     /**

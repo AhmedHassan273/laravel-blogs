@@ -4,9 +4,13 @@ body {
 
 footer {
     display: flex;
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
+}
+
+#body {
+    min-height: 279px;
 }
 
 @media (min-width: 992px) {
