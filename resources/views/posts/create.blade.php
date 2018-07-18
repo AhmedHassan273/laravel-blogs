@@ -5,6 +5,9 @@
     <!-- Post Content Column -->
     <div class="col-lg-12">
         <hr>
+        <div class="form-group">
+            @include('layouts.errors')
+        </div>
         <form method="POST" action="/posts">
             {{ csrf_field() }}
 
