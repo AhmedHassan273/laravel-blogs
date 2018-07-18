@@ -34,13 +34,11 @@ class PostsController extends Controller
     **/
     public function store()
     {
-        $post = new Post;
+        Post::create([
+            'title' => request('title'),
+            'body' => request('body')
+        ]);
 
-        $post->title = request('title');
-        $post->body = request('body');
-
-        $post->save();
-        
         return view('posts.index');
     }
 
