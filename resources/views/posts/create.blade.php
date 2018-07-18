@@ -22,7 +22,6 @@
             </div>
             
             <button type="submit" class="btn btn-primary btn-block">Publish</button>
-        
         </form>
         <hr>
     </div>
