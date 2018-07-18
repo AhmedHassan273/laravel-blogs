@@ -1,0 +1,16 @@
+body {
+    padding-top: 54px;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
