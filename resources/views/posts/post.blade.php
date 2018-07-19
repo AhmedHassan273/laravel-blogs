@@ -13,9 +13,4 @@
 <p>Posted on <span class="text-muted">{{$post->created_at->toFormattedDateString()}}</span></p>
 <hr>
 <!-- Preview Image -->
-<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-<!-- Post Content -->
-<p class="lead">
-    {{$post->body}}
-</p>
-<hr>
+<img class="img-fluid rounded" src="http://placehold.it/1600x900" alt="">

@@ -14,13 +14,13 @@
                     <div class="col-lg-8">
 
                         @include('posts.post')
-                        
-                        @include('posts.comments')
 
                     </div>
                     
-                    <div class="col-md-4 text-center" id="sideBar">
+                    <div class="col-md-4 text-center">
+                        
                         @include('layouts.sidebar')
+                        
                     </div>
                 </div>
             </div>

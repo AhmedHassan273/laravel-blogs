@@ -28,13 +28,38 @@ a {
   color: #2082a8;
 }
 
+.navbar-brand {
+  font-family: Bootcamp;
+  font-size: 36px;
+  font-weight: bold;
+  color: #9af3ec !important;
+  letter-spacing: 5px;
+  margin: 0 0 !important;
+  padding: 0 0 !important;
+}
+
 #navbarResponsive a:hover {
-  color: #f0f8ff;
+  color: #9af3ec;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
+}
+
+#commentSection {
+  background: #8c939927;
+  padding: 10px 15px;
+}
+
+.singleComment {
+  background: #ffffff93;
+  padding: 10px 15px;
+}
+
+.commenter {
+  margin: 0 0 !important;
+  padding: 0 0;
 }
 
