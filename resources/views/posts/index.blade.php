@@ -19,7 +19,7 @@
 
                     </div>
                     
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center" id="sideBar">
                         @include('layouts.sidebar')
                     </div>
                 </div>
