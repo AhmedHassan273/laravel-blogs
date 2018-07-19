@@ -1,5 +1,5 @@
 <!-- Title -->
-<h1 class="mt-4">
+<h1 class="mt-4" id="postTitle">
     <a href="/posts/{{$post->id}}">
         {{$post->title}}
     </a>

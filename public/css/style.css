@@ -13,6 +13,23 @@ footer {
     min-height: 279px;
 }
 
+a:hover,
+a {
+    text-decoration: none;
+}
+
+#postTitle a {
+    color: rgb(17, 78, 102);
+}
+
+#postTitle a:hover {
+    color: rgb(32, 130, 168);
+}
+
+#navbarResponsive a:hover {
+    color: #f0f8ff;
+}
+
 @media (min-width: 992px) {
     body {
         padding-top: 56px;
