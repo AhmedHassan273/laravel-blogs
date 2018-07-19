@@ -1,14 +1,49 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body {
+    padding-top: 54px;
+    background: blue;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+#body {
+    min-height: 279px;
+}
+
+a:hover,
+a {
+    text-decoration: none;
+}
+
+#postTitle a {
+    color: rgb(17, 78, 102);
+}
+
+#postTitle a:hover {
+    color: rgb(32, 130, 168);
+}
+
+#navbarResponsive a:hover {
+    color: #f0f8ff;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
 }
