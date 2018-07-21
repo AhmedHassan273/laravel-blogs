@@ -12,7 +12,7 @@
 */
 
 // GET requests
-Route::get('/login', 'Auth\LoginController@create');
+Route::get('/login', 'Auth\LoginController@create')->name('login');
 Route::get('/register', 'Auth\RegisterController@create');
 
 Route::get('/', 'PostsController@index')->name('home');
