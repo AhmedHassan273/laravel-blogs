@@ -4,6 +4,7 @@ namespace App;
 
 class Post extends Model
 {
+    
     public function comments() {
         
         return $this->hasMany(Comment::class);
@@ -13,5 +14,9 @@ class Post extends Model
         
         $this->comments()->create(compact('body'));
         
+    }
+
+    public function user() {
+        return $this->belongsTo(User::class);
     }
 }

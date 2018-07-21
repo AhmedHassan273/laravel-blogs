@@ -6,7 +6,7 @@
 </h1>
 <!-- Author -->
 <p class="lead">
-    by <a href="#">Zeyad Etman</a>
+    by <a href="#">{{ $post->user->name }}</a>
 </p>
 <hr>
 <!-- Date/Time -->

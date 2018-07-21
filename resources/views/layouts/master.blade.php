@@ -21,7 +21,6 @@
 
         </div>
 
-
         <footer class="py-5 bg-dark">
 
             @include('layouts.footer')

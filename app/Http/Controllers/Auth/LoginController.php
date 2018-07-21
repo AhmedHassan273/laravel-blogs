@@ -25,7 +25,6 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -35,5 +34,24 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    
+    protected function store() {
+
+        return (auth()->attempt(request(['email', 'password'])) ? redirect()->home() : back()->withErrors([
+            'message' => 'Please Check your email or/and password then try again'
+        ])) ;
+    }
+
+    protected function create() {
+
+        return view('sessions.login');
+    }
+
+    protected function logout() {
+
+        auth()->logout();
+
+        return redirect()->home();
     }
 }
