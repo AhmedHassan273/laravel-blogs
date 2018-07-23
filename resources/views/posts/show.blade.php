@@ -9,7 +9,7 @@
         </h1>
         <!-- Author -->
         <p class="lead">
-            by <a href="#">Zeyad Etman</a>
+            by <a href="#">{{ $post->user->name }}</a>
         <!-- Date/Time -->
         <small>
             Posted on <span class="text-muted">{{$post->created_at->toFormattedDateString()}}</span></p>
