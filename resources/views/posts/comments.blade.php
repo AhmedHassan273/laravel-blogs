@@ -20,7 +20,7 @@
     <div class="media mb-4 singleComment rounded">
         <img class="d-flex mr-3 rounded-circle" src="https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Account-512.png" width="50" height="50" alt="">
         <div class="media-body">
-        <h5 class="mt-0 commenter">Commenter Name</h5> 
+        <h5 class="mt-0 commenter">{{$comment->user->name}}</h5> 
         <small class="text-muted">{{$comment->created_at->diffForHumans()}}</small>
             <p>
                 {{$comment->body}}    

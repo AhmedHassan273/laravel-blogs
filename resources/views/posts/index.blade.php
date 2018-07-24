@@ -11,16 +11,10 @@
             <div class="container">
                 <div class="row">
                     <!-- Post Content Column -->
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
 
                         @include('posts.post')
 
-                    </div>
-                    
-                    <div class="col-md-4 text-center">
-                        
-                        @include('layouts.sidebar')
-                        
                     </div>
                 </div>
             </div>
