@@ -4,7 +4,7 @@
 Thank you for using my blog website
 
 @component('mail::button', ['url' => 'https://github.com/AhmedHassan273'])
-About Me
+My github
 @endcomponent
 
 @component('mail::panel', ['url' => ''])
