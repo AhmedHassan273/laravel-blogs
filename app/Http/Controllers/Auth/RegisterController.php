@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Mail\Welcome;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -65,6 +67,8 @@ class RegisterController extends Controller
         ]);
 
         auth()->login($user);
+
+        \Mail::to($user)->send(new Welcome($user));
 
         return redirect()->home();
     }
