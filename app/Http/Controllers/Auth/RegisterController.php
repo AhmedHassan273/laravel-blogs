@@ -54,6 +54,7 @@ class RegisterController extends Controller
     }
 
     protected function store() {
+
         $this->validate(request(), [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
@@ -69,6 +70,8 @@ class RegisterController extends Controller
         auth()->login($user);
 
         \Mail::to($user)->send(new Welcome($user));
+
+        session()->flash('registerMessage', 'Thank you for Using My Blog Site');
 
         return redirect()->home();
     }

@@ -33,7 +33,9 @@ class User extends Authenticatable
     }
 
     public function publish(Post $post) {
-        
+
+        session()->flash('publishMessage', 'Your post has been published successfully');
+
         return $this->posts()->save($post);
     }
 

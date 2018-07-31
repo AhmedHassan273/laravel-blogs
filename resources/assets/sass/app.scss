@@ -9,12 +9,15 @@ footer {
     bottom: 0;
 }
 
-#body {
-    min-height: 279px;
+#postBody {
+    padding: 10px;
+    white-space: pre-line;
+    word-break: break-all;
 }
 
 a:hover,
 a {
+    word-break: break-all;
     text-decoration: none;
 }
 
@@ -66,4 +69,11 @@ a {
     width: 100%;
     padding: 50px 30% !important;
     box-sizing: border-box;
+}
+
+.flash {
+    position: fixed;
+    z-index: 10;
+    left: 72%;
+    top: 87%;
 }

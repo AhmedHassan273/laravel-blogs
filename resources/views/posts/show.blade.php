@@ -14,12 +14,14 @@
         <small>
             Posted on <span class="text-muted">{{$post->created_at->toFormattedDateString()}}</span></p>
         </small>
+        
         <hr>
         <!-- Post Content -->
-        <p class="lead">
+        <p class="lead" id="postBody">
             {{$post->body}}
         </p>
         <hr>
+
         <section id="commentSection" class="container rounded">
             
             @include('posts.comments')

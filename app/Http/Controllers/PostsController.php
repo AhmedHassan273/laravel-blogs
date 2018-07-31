@@ -10,6 +10,7 @@ class PostsController extends Controller
 {
     
     public function __construct() {
+
         $this->middleware('auth')->except(['index', 'show']);
     }
 
@@ -30,29 +31,30 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
+
         return view('posts.create');
     }
 
     /**
      * Store a newly created resource in storage.
     **/
-    public function store()
-    {
+    public function store() {
+        
         $this->validate(request(), [
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'image' => 'required|mimes:jpeg,jpg,png'
         ]);
         
         auth()->user()->publish(
             new Post(request([
-                                'title',
-                                'body'
-                            ]))
-        );
+                'title',
+                'body',
+                'image'
+            ])));
 
-        return redirect('/');
+        return redirect()->home();
     }
 
     /**
