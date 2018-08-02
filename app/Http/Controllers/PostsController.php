@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Intervention\Image\Facades\Image;
+
 use App\Post;
 
 class PostsController extends Controller
@@ -47,12 +49,20 @@ class PostsController extends Controller
             'image' => 'required|mimes:jpeg,jpg,png'
         ]);
         
-        auth()->user()->publish(
-            new Post(request([
-                'title',
-                'body',
-                'image'
-            ])));
+        if(request()->hasFile('image')) {
+            $post_thumbnail = request()->file('image');
+            $filename = time() . '.' . $post_thumbnail->getClientOriginalExtension();
+            
+            Image::make($post_thumbnail)->save(public_path('uploads\\' . $filename));
+
+            auth()->user()->publish(
+                new Post([
+                    'title' => request('title'),
+                    'body' => request('title'),
+                    'image' => $filename
+                ])
+            );
+        }
 
         return redirect()->home();
     }
@@ -68,39 +78,5 @@ class PostsController extends Controller
         $post = Post::find($id);
 
         return view('posts.show', compact('post'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

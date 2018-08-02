@@ -21,14 +21,12 @@
                 <div id="flash-register" class="flash alert alert-success" role="alert">
                     {{$flash}}
                 </div>
-            @endif
-
-            @if($flash = session('publishMessage'))
-                <div id="flash-publish" class="flash alert alert-success" role="alert">
+            @elseif($flash = session('publishMessage'))
+                <div id="flash-register" class="flash alert alert-success" role="alert">
                     {{$flash}}
                 </div>
             @endif
-
+            
             @yield('content')
 
         </div>

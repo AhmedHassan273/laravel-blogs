@@ -81,3 +81,18 @@ a {
   top: 87%;
 }
 
+.posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #a9aaac1e;
+  float: left;
+  border: 1px solid #8c939927;
+  border-radius: 10px;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 15px;
+}
+

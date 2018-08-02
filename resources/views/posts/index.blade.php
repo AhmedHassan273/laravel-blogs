@@ -6,22 +6,17 @@
 <main role="main">
 <br>
     @foreach($posts as $post)
+        <div class="posts">
+            <div class="row">
+                <!-- Post Content Column -->
+                <div class="col-lg-12">
 
-        <section class="jumbotron">
-            <div class="container">
-                <div class="row">
-                    <!-- Post Content Column -->
-                    <div class="col-lg-12">
+                    @include('posts.post')
 
-                        @include('posts.post')
-
-                    </div>
                 </div>
             </div>
-        </section>
-
+        </div>
     @endforeach
-
 </main>
 
 @endsection
