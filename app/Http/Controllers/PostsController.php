@@ -58,7 +58,7 @@ class PostsController extends Controller
             auth()->user()->publish(
                 new Post([
                     'title' => request('title'),
-                    'body' => request('title'),
+                    'body' => request('body'),
                     'image' => $filename
                 ])
             );
