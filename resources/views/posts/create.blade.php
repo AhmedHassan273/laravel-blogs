@@ -17,7 +17,7 @@
             </div>
 
             <div class="form-group">
-                <label for="image">Thumbnail:</label>
+                <label for="image">Thumbnail</label>
                 <input type="file" type="image" class="form-control form-control-file" name="image" id="image">
             </div>
             
